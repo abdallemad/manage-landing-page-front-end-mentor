@@ -11,7 +11,7 @@ const SPRING_ANIMATION = {
   damping: 10
 }
 const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 4;
+const AUTO_DELAY = ONE_SECOND * 5;
 
 function Reviews() {
   return (
@@ -52,9 +52,9 @@ function ReviewsSlider() {
       return
     }
     else if (dragXValue > 0) {
-      setActiveIndex((prev) => Math.max(prev - 1, 0))
-    } else {
       setActiveIndex((prev) => Math.min(prev + 1, REVIEWS.length - 1))
+    } else {
+      setActiveIndex((prev) => Math.max(prev - 1, 0))
     }
   }
   return (
